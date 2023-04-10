@@ -3,9 +3,9 @@
 const map = L.map('the_map').setView([48.742474, -35.568517], 2); // (1)!
 
 // Leaflet tile layer, i.e. the base map
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-}).addTo(map); // (2)!
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 //JavaScript let variable declaration to create a marker
 let marker_sf = L.marker([37.774929, -122.419418]).addTo(map)
