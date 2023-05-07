@@ -1,3 +1,44 @@
+// Mapping Favorite Restaurants Map
+
+let mapOptions3 = {'center': [34.05486654874919, -118.26360364555003],'zoom':10}
+
+const map3 = L.map('the_map3').setView(mapOptions3.center, mapOptions3.zoom); // (1)!
+
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+}).addTo(map3);
+
+function addMarker3(lat,lng,title,message,desc){
+    console.log(message)
+    L.marker([lat,lng]).addTo(map3).bindPopup(`<h2>${title}</h2> <h3>Submitted by: ${message}</h3> <p>What I Like About It: ${desc}</p>`)
+    return message
+}
+
+const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS3JMLOzEGJEKn7YFIig9PCzerJO5TofP09ThGtSsqt41yRbZDP9BlPrFSyLAjEKR4cmkIoR2N5MYbR/pub?output=csv"
+
+function loadData(url){
+    Papa.parse(url, {
+        header: true,
+        download: true,
+        complete: results => processData(results)
+    })
+}
+
+function processData(results){
+    console.log(results)
+    results.data.forEach(data => {
+        console.log(data)
+        addMarker3(data.lat,data.lng,data["What's the name of your favorite restaurant?"],data["What's your name?"], data["What do you like about it?"])
+    })
+}
+
+// this is our function call to get the data
+// we will put this comment to remember to call our function later!
+loadData(dataUrl)
+
+// Places I've worked map
+
 let mapOptions = {'center': [34.05486654874919, -118.26360364555003],'zoom':14}
 
 const map2 = L.map('the_map2').setView(mapOptions.center, mapOptions.zoom); // (1)!
@@ -46,7 +87,7 @@ fetch("map.geojson")
 
     });
 
-// JavaScript const variable declaration
+// Places I've Been Map
 
 const map = L.map('the_map').setView([48.742474, -35.568517], 2); // (1)!
 

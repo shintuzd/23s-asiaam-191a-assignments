@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Maps - Mohammed Azad</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <!-- Leaflet's css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+        <!-- Leaflet's JavaScript-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">Home</a>
+            <a href="maps.html">My Maps</a>
+            <a href="https://www.instagram.com/shintuzd/">Instagram</a>
+            <a href="https://github.com/shintuzd">Github</a>
+            <a href="https://www.linkedin.com/in/azadmohammed/">LinkedIn</a>
+        </header>
+
+        <div class="main">
+            <div id="contents">
+                <h1 class="textstyle"> Mohammed Azad's Map Portfolio</h1>
+                <h2 class="textstyle"> Spring 2023 | AA191A - Web Development and GIS for Social Change</h2>
+            <h3 class="heading"> Map Your Restaurants! 🍔</h3>
+            <p> After inputting your response, give the webpage a minute to map your the location of your restaurant.</p>
+            <div id="rest_map">
+                <div id="form_contents">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfE2emFQRcY6jjsa_VRpCs89c_69QoSM27tyZ4-Vw2CKNgPg/viewform?embedded=true" width="440" height="610" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div id="the_map3"></div> 
+            </div>
+            <h3 class="heading"> Places I've Worked and Volunteered 🧑🏾‍💻</h3>
+            <p> These are places I've worked and volunteered throughout my lifetime. Orange markers indicate volunteering, purple markers indicate internships, and green markers indicate jobs! </p>
+            <p> Click on the buttons to navigate to these various locations on the map. </p>
+            <div id="buttons"></div>
+            <div id="the_map2"></div>
+            <h3 class="heading"> Places I've Visited Around The World 🌎</h3>
+            <div id="the_map"></div>
+            </div>
+            <script src="js/init.js"></script>
+        </div>
+
+        <div id="footer" style="text-align: right;"> Copyright (2023) </div>
+    </body>
+</html>

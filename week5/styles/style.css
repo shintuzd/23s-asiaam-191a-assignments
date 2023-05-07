@@ -1,0 +1,115 @@
+body{
+    display: grid;
+    grid-template-areas: "header" "main_content" "footer";
+    grid-template-rows: 1fr;
+    background-color: rgb(152, 247, 190); /* feel free to change this to a more pleasing color */
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+}
+
+.main{
+    grid-area: main_content;
+    grid-template-areas: "content" "main_map";
+    display: grid;
+}
+
+#rest_map{
+    grid-area: main_content;
+    grid-template-columns: 1.9fr 0.1fr;
+    grid-template-areas: "main_map3 form_content";
+    grid-template-rows: 1 fr;
+    display: grid;
+}
+
+#contents{
+    grid-area: content;
+}
+
+#form_contents{
+    grid-area: form_content;
+}
+
+#the_map{
+    height:80vh;
+    grid-area: auto;
+    margin: 2%;
+    grid-area: main_map1;
+}
+
+#the_map2{
+    height:80vh;
+    grid-area: auto;
+    margin: 2%;
+    grid-area: main_map2;
+}
+
+#the_map3{
+    height:80vh;
+    margin: 2%;
+    grid-area: main_map3;
+}
+
+#pfp{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    padding: 20px
+
+}
+   
+img {
+    max-width: 40%;
+    max-height: 40%;
+}
+   
+.text {
+    font-size: 40px;
+}
+
+h1.textstyle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+
+h2.textstyle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+
+p.textstyle {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.list{
+    text-align: center;
+}
+
+h3.heading{
+    text-decoration: underline;
+}
+
+ul.liststyle {
+    line-height: 30px;
+    font-size: 18px;
+    list-style-type: disc;
+}
+
+ol.liststyle {
+    line-height: 30px;
+    font-size: 18px;
+}
