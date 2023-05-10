@@ -15,6 +15,18 @@ function addMarker3(lat,lng,title,message,desc){
     return message
 }
 
+function createButtons2(lat,lng,title){
+    const newButton = document.createElement("button"); // adds a new button
+    newButton.id = "button2"+title; // gives the button a unique id
+    newButton.innerHTML = title; // gives the button a title
+    newButton.setAttribute("lat",lat); // sets the latitude 
+    newButton.setAttribute("lng",lng); // sets the longitude 
+    newButton.addEventListener('click', function(){
+        map3.flyTo([lat,lng], 14); //this is the flyTo from Leaflet
+    })
+    document.getElementById("buttons2").appendChild(newButton); //this adds the button to our page.
+  }
+
 const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS3JMLOzEGJEKn7YFIig9PCzerJO5TofP09ThGtSsqt41yRbZDP9BlPrFSyLAjEKR4cmkIoR2N5MYbR/pub?output=csv"
 
 function loadData(url){
@@ -30,6 +42,7 @@ function processData(results){
     results.data.forEach(data => {
         console.log(data)
         addMarker3(data.lat,data.lng,data["What's the name of your favorite restaurant?"],data["What's your name?"], data["What do you like about it?"])
+        createButtons2(data.lat,data.lng,data["What's the name of your favorite restaurant?"])
     })
 }
 
@@ -56,7 +69,7 @@ function createButtons(lat,lng,title){
   newButton.setAttribute("lat",lat); // sets the latitude 
   newButton.setAttribute("lng",lng); // sets the longitude 
   newButton.addEventListener('click', function(){
-      map2.flyTo([lat,lng]); //this is the flyTo from Leaflet
+      map2.flyTo([lat,lng], 16); //this is the flyTo from Leaflet
   })
   document.getElementById("buttons").appendChild(newButton); //this adds the button to our page.
 }
