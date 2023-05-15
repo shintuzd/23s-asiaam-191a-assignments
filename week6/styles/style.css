@@ -1,3 +1,5 @@
+/* This is for the main page */
+
 body{
     display: grid;
     grid-template-areas: "header" "main_content" "footer";
@@ -16,25 +18,78 @@ footer{
 
 .main{
     grid-area: main_content;
-    grid-template-areas: "content" "main_map";
+    grid-template-areas: "title" "restaurant_portion" "work_portion" "travel_portion";
     display: grid;
+}
+
+.bio{
+    grid-area: main_content;
+    grid-template-areas: "header" "body" "footer";
+    display: grid;
+}
+
+/* This is for the restaurant map */
+
+#restaurant_portion{
+    grid-area: restaurant_portion;
+    grid-template-areas: "restaurant_heading" "restaurant_interface";
+    display:grid;
+    grid-template-rows: 70px auto auto;
+    gap: 25px;
+
+}
+
+#restaurant_interface{
+    display: grid;
+    grid-template-columns: 1fr .6fr;
+    grid-template-areas: "restaurant_map restaurant_survey";
+    grid-area: restaurant_interface;
 }
 
 #restaurant_map{
-    grid-area: main_content;
-    grid-template-columns: 1.3fr 0.7fr;
-    grid-template-areas: "main_map3 form_content";
-    grid-template-rows: 1 fr;
-    display: grid;
-}
-
-#contents{
-    grid-area: content;
+    grid-area: restaurant_map;
+    display:grid;
+    grid-template-rows: .2fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "buttons2" "main_map3";
 }
 
 #restaurant_survey{
-    grid-area: form_content;
+    height: 90vh;
+    grid-area: restaurant_survey;
 }
+
+#buttons2{
+    grid-area: buttons2;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#restaurant_heading{
+    grid-area: restaurant_heading;
+    justify-self: left;
+}
+
+/* This is for the work map */
+
+#work_portion{
+    grid-area: work_portion;
+
+}
+
+#the_map3{
+    height:80vh;
+    margin: 2%;
+    grid-area: main_map3;
+}
+
+#travel_portion{
+    grid-area: travel_portion;
+
+}
+
+
+
 
 #the_map{
     height:80vh;
@@ -50,11 +105,6 @@ footer{
     grid-area: main_map2;
 }
 
-#the_map3{
-    height:80vh;
-    margin: 2%;
-    grid-area: main_map3;
-}
 
 #pfp{
     max-width: 500px;
@@ -77,16 +127,9 @@ img {
     font-size: 40px;
 }
 
-h1.textstyle {
+#title{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    
-}
-
-h2.textstyle {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    
 }
 
 p.textstyle {
