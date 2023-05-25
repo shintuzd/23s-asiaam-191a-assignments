@@ -1,0 +1,158 @@
+/* This is for the main page */
+
+body{
+    display: grid;
+    grid-template-areas: "header" "main_content" "footer";
+    grid-template-rows: 1fr;
+    background-color: rgb(152, 247, 190); /* feel free to change this to a more pleasing color */
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+}
+
+.main{
+    grid-area: main_content;
+    grid-template-areas: "title" "restaurant_portion" "work_portion" "travel_portion";
+    display: grid;
+}
+
+.bio{
+    grid-area: main_content;
+    grid-template-areas: "header" "body" "footer";
+    display: grid;
+}
+
+/* This is for the restaurant map */
+
+#restaurant_portion{
+    grid-area: restaurant_portion;
+    grid-template-areas: "restaurant_heading" "restaurant_interface";
+    display:grid;
+    grid-template-rows: 70px auto auto;
+    gap: 80px;
+
+}
+
+#restaurant_interface{
+    display: grid;
+    grid-template-columns: 1fr .6fr;
+    grid-template-areas: "restaurant_map restaurant_survey";
+    grid-area: restaurant_interface;
+}
+
+#restaurant_map{
+    grid-area: restaurant_map;
+    display:grid;
+    grid-template-rows: .2fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "buttons2" "main_map3";
+}
+
+#restaurant_survey{
+    height: 90vh;
+    grid-area: restaurant_survey;
+}
+
+#buttons2{
+    grid-area: buttons2;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#restaurant_heading{
+    grid-area: restaurant_heading;
+    justify-self: left;
+}
+
+/* This is for the work map */
+
+#work_portion{
+    grid-area: work_portion;
+
+}
+
+#the_map3{
+    height:80vh;
+    margin: 2%;
+    grid-area: main_map3;
+}
+
+#travel_portion{
+    grid-area: travel_portion;
+
+}
+
+
+
+
+#the_map{
+    height:80vh;
+    grid-area: auto;
+    margin: 2%;
+    grid-area: main_map1;
+}
+
+#the_map2{
+    height:80vh;
+    grid-area: auto;
+    margin: 2%;
+    grid-area: main_map2;
+}
+
+
+#pfp{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    padding: 20px
+
+}
+   
+img {
+    max-width: 40%;
+    max-height: 40%;
+}
+   
+.text {
+    font-size: 40px;
+}
+
+#title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p.textstyle {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.list{
+    text-align: center;
+}
+
+h3.heading{
+    text-decoration: underline;
+}
+
+ul.liststyle {
+    line-height: 30px;
+    font-size: 18px;
+    list-style-type: disc;
+}
+
+ol.liststyle {
+    line-height: 30px;
+    font-size: 18px;
+}
